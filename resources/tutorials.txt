@@ -1,0 +1,4 @@
+https://nodejs.org/en/docs/guides/getting-started-guide/
+https://www.cloudbees.com/blog/node-js-tutorial
+https://www.youtube.com/watch?v=TlB_eWDSMt4&t=1s
+https://www.youtube.com/results?search_query=nodejs+for+beginners
