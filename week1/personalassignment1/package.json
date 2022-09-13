@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Elias-Yuri-Maximo/CSE342-BackendDev/issues"
   },
-  "homepage": "https://github.com/Elias-Yuri-Maximo/CSE342-BackendDev#readme"
+  "homepage": "https://github.com/Elias-Yuri-Maximo/CSE342-BackendDev#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
