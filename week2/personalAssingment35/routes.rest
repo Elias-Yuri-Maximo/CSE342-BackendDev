@@ -1,0 +1,34 @@
+#LOCAHOST
+
+### Gets all✔️
+GET http://localhost:8080/contacts HTTP/1.1 
+
+### Gets one✔️
+GET http://localhost:8080/contacts/6324faea54af46ae69192ab2 HTTP/1.1 
+
+### Create contact✔️
+
+POST http://localhost:8080/contacts/ HTTP/1.1 
+content-type: application/json
+
+{
+"firstName":"Ashley", "lastName":"Weaver", "email":"aWeaver@test.com", "favoriteColor":"Brown", "birthday":"06/19/2000"
+}
+###Put Request ✔️
+PUT http://localhost:8080/contacts/632bcc6aaff188149180c5dd HTTP/1.1 
+content-type: application/json
+
+{
+"firstName":"Sarah", "lastName":"Birch", "email":"test@gmail.com", "favoriteColor":"Green", "birthday":"12/12/20"
+}
+
+###DELETE✔️
+DELETE  http://localhost:8080/contacts/6324faea54af46ae69192ab2 HTTP/1.1 
+content-type: application/json
+
+
+################################################
+#Render Links
+
+
+
