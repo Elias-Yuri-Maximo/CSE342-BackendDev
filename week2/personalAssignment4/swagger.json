@@ -1,0 +1,170 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Elias'Maximo",
+      "description": "Contacts",
+      "version": "1.0.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+
+    "paths": {
+        "/api-docs": {
+            "get": {
+              "description": "This is the endpoint for the documentation",
+              "parameters": [],
+              "responses": {}
+            }
+          },
+
+      "/contacts/": {
+
+
+        "get": {
+                "description": "Gets All records",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                    "description": "OK"
+                    }
+            }
+            },
+
+
+        "post":{
+                "description": "Inserts new record",
+                "parameters": [
+                    {
+                    "name": "body",
+                    "in": "body",
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                        "firstName": {
+                            "example": "any"
+                        },
+                        "lastName": {
+                            "example": "any"
+                        },
+                        "email": {
+                            "example": "any"
+                        },
+                        "favoriteColor": {
+                            "example": "any"
+                        },
+                        "birthday": {
+                            "example": "any"
+                        }
+                        }
+                    }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                    "description": "Created"
+                    },
+                    "500": {
+                    "description": "Internal Server Error"
+                    }
+                }
+                }
+            },
+
+
+      "/contacts/{id}": {
+
+
+
+        "get": {
+          "description": "Gets a specific record",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+
+
+
+        "put": {
+          "description": "Alters an existing record",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "example": "any"
+                  },
+                  "lastName": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
+                  "favoriteColor": {
+                    "example": "any"
+                  },
+                  "birthday": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+
+
+
+        "delete": {
+          "description": "Deletes record",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      }
+    }
+  }
