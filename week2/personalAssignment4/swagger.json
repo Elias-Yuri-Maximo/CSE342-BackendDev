@@ -7,7 +7,6 @@
     },
     "host": "personalassignment4.onrender.com",
     "basePath": "/",
-    "schemes": ["https"],
 
     "paths": {
         "/api-docs": {
