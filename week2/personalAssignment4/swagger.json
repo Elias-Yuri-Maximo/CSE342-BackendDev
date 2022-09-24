@@ -5,7 +5,7 @@
       "description": "Contacts",
       "version": "1.0.0"
     },
-    "host": "https://personalassignment4.onrender.com/",
+    "host": "https://personalassignment4.onrender.com",
     "basePath": "/",
 
     "paths": {
