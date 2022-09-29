@@ -1,0 +1,99 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Elias'Maximo",
+      "description": "bookmarks",
+      "version": "1.0.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+
+    "paths": {
+        "/api-docs": {
+            "get": {
+              "description": "This is the endpoint for the documentation",
+              "parameters": [],
+              "responses": {}
+            }
+          },
+
+      "/bookmarks/": {
+
+
+        "get": {
+                "description": "Gets All records",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                    "description": "OK"
+                    }
+            }
+            },
+
+
+        "post":{
+                "description": "Inserts new record",
+                "parameters": [
+                    {
+                    "name": "body",
+                    "in": "body",
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                          "title":{"example":"My Book Of Mormon Reading"},
+                          "note":{"example":"Reading the book of Mormon cover to cover"},
+                          "book":{"example":"bookOfMormon"},
+                          "currentBook":{"example":"1nephi"},
+                          "currentChapter":{"example":"1"},
+                          "progressPercent":{"example":"0"},
+                          "lastReadIn":{"example":"01-apr-2022"},
+                          "FinishPrediction":{"example":"02-dec-2023"}
+                        }
+                    }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                    "description": "Created"
+                    },
+                    "500": {
+                    "description": "Internal Server Error"
+                    }
+                }
+                }
+            },
+
+
+      "/bookmarks/{id}": {
+
+
+
+        "get": {
+          "description": "Gets a specific record",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+
+
+          }
+        }
+      }
+    
+  

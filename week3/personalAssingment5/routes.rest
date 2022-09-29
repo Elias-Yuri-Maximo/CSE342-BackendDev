@@ -1,0 +1,37 @@
+#LOCAHOST
+
+### Gets all✔️
+GET http://localhost:8080/bookmarks HTTP/1.1 
+
+### Gets one✔️
+GET http://localhost:8080/bookmarks/6324faea54af46ae69192ab2 HTTP/1.1 
+
+### Create contact✔️
+
+POST http://localhost:8080/bookmarks/ HTTP/1.1 
+content-type: application/json
+
+{
+"title":"My Book Of Mormon Reading8", "note":"Reading the book of Mormon cover to cover", "book":"bookOfMormon", "currentBook":"1nephi", "currentChapter":"1", "progressPercent":"0"
+}                     
+
+
+################################################
+#Render Links
+
+### Gets all✔️
+GET https://personalassignment4.onrender.com/bookmarks HTTP/1.1 
+
+### Gets one✔️
+GET https://personalassignment4.onrender.com/bookmarks/632bcc6aaff188149180c5dd HTTP/1.1 
+
+### Create contact✔️
+
+POST https://personalassignment4.onrender.com/bookmarks/ HTTP/1.1 
+content-type: application/json
+
+{
+"firstName":"Jarvis", "lastName":"Weaver", "email":"aWeaver@test.com", "favoriteColor":"Brown", "birthday":"06/19/2000"
+}
+
+
