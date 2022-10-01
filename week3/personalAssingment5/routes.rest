@@ -31,7 +31,7 @@ POST https://personalassignment5.onrender.com/bookmarks/ HTTP/1.1
 content-type: application/json
 
 {
-"title":"book of morman", "note":"Focusing on the Atonment", "book":"bookOfMormon", "currentBook":"1nephi", "currentChapter":"1", "progressPercent":"0"
+"title":"book of mormx", "note":"Attending to president nelson`s challenge", "book":"bookOfMormon", "currentBook":"1nephi", "currentChapter":"1", "progressPercent":"0"
 }                     
 
 

@@ -1,0 +1,23 @@
+{
+"contact1":{
+"firstName":"Johann",
+"lastName":"Schnekenbauer",
+"email":"JSchneckenbauer@gmail.com",
+"favoriteColor":"blue",
+"birthday":"3-march-1989"
+},
+"contact2":{
+    "firstName":"Johann",
+    "lastName":"Schnekenbauer",
+    "email":"JSchneckenbauer@gmail.com",
+    "favoriteColor":"blue",
+    "birthday":"3-march-1989"
+},
+"contact3":{
+    "firstName":"Johann",
+    "lastName":"Schnekenbauer",
+    "email":"JSchneckenbauer@gmail.com",
+    "favoriteColor":"blue",
+    "birthday":"3-march-1989"
+}
+}
