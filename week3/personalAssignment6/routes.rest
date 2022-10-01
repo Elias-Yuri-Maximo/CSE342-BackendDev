@@ -33,14 +33,14 @@ content-type: application/json
 #Render Links
 
 ### Gets all✔️
-GET https://personalassignment5.onrender.com/bookmarks HTTP/1.1 
+GET https://personalassignment6.onrender.com/bookmarks HTTP/1.1 
 
 ### Gets one✔️
-GET https://personalassignment5.onrender.com/bookmarks/632bcc6aaff188149180c5dd HTTP/1.1 
+GET https://personalassignment6.onrender.com/bookmarks/632bcc6aaff188149180c5dd HTTP/1.1 
 
 ### Create contact✔️
 
-POST https://personalassignment5.onrender.com/bookmarks/ HTTP/1.1 
+POST https://personalassignment6.onrender.com/bookmarks/ HTTP/1.1 
 content-type: application/json
 
 {
@@ -49,7 +49,7 @@ content-type: application/json
 
 
 ### Alter contact ✔️
-PUT https://personalassignment5.onrender.com/bookmarks/6334f8fb3182dbbcada516ed HTTP/1.1 
+PUT https://personalassignment6.onrender.com/bookmarks/6334fb593182dbbcada516efHTTP/1.1 
 content-type: application/json
 
 {
@@ -57,5 +57,5 @@ content-type: application/json
 }                     
 
 ### Delete contact ✔️
-DELETE https://personalassignment5.onrender.com/bookmarks/6335093d785973b53baca08b HTTP/1.1 
+DELETE https://personalassignment6.onrender.com/bookmarks/6334fb593182dbbcada516ef HTTP/1.1 
 content-type: application/json
