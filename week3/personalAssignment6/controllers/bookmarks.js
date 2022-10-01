@@ -80,7 +80,7 @@ const updateBookmark = async (req, res) => {
     res.status(400).send({ message: 'Content can not be empty!' });
     return;
   }
-  if (!(req.body.book in utils.books)){
+  if ((utils.books.includes(req.body.currentBook) )){
     res.status(400).send({ message: 'Book non existant!' });
     return;
   }

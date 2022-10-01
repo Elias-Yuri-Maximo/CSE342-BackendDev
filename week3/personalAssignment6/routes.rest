@@ -12,7 +12,7 @@ POST http://localhost:8080/bookmarks/ HTTP/1.1
 content-type: application/json
 
 {
-"title":"Narnia", "note":"dfd", "book":"bookOfMormon", "currentBook":"1nephi", "currentChapter":"1", "progressPercent":"1"
+"title":"Narnia", "note":"dfd", "book":"bookOfMormon", "currentBook":"narnia", "currentChapter":"1", "progressPercent":"1"
 } 
 
 ### Alter contact ✔️

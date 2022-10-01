@@ -18,14 +18,14 @@ function checkEmptyFields(body){
     let checkArray = []
     for (let item in body){
         console.log(body[item])
-        if (body[item] == ''||!body[item]){
+        if (body[item] == ''){
             checkArray.push('')
         }else{
-            checkArray.push('')
+            checkArray.push(true)
         }
     }
     console.log('checkArray'+ checkArray)
-    if (!('' in checkArray)){
+    if (!(checkArray.includes(''))){
         return true
     }else{
         return false
