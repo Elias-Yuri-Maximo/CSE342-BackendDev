@@ -48,3 +48,14 @@ content-type: application/json
 }                     
 
 
+### Alter contact ✔️
+PUT https://personalassignment5.onrender.com/bookmarks/6334f8fb3182dbbcada516ed HTTP/1.1 
+content-type: application/json
+
+{
+"title":"For Narnia and for Aslan", "note":"Reading the book of Mormon cover to cover", "book":"bookOfMormon", "currentBook":"1nephi", "currentChapter":"1", "progressPercent":"0"
+}                     
+
+### Delete contact ✔️
+DELETE https://personalassignment5.onrender.com/bookmarks/6335093d785973b53baca08b HTTP/1.1 
+content-type: application/json

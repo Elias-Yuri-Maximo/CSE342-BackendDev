@@ -5,7 +5,7 @@
       "description": "bookmarks",
       "version": "1.0.0"
     },
-    "host": "personalassignment5.onrender.com",
+    "host": "localhost:8080",
     "basePath": "/",
 
     "paths": {
@@ -49,8 +49,8 @@
                           "currentBook":{"example":"1nephi"},
                           "currentChapter":{"example":"1"},
                           "progressPercent":{"example":"0"},
-                          "lastReadIn":{"example":"01-apr-2022"},
-                          "FinishPrediction":{"example":"02-dec-2023"}
+                          "lastReadIn":{"example":"01-apr-2022"}
+                          
                         }
                     }
                     }
@@ -61,7 +61,10 @@
                     },
                     "500": {
                     "description": "Internal Server Error"
-                    }
+                    },
+                    "400": {
+                      "description": "Bad Request"
+                      }
                 }
                 }
             },
@@ -89,11 +92,77 @@
               "description": "OK"
             }
           }
+        },
+        
+
+        "put": {
+          "description": "Alters an existing record",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title":{"example":"My Book Of Mormon Reading"},
+                  "note":{"example":"Reading the book of Mormon cover to cover"},
+                  "book":{"example":"bookOfMormon"},
+                  "currentBook":{"example":"1nephi"},
+                  "currentChapter":{"example":"1"},
+                  "progressPercent":{"example":"0"}
+                
+                }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            },
+            "400": {
+              "description": "Bad Request"
+              }
+          }
+        },
+
+
+
+        "delete": {
+          "description": "Deletes record",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            },
+            "400": {
+              "description": "Bad Request"
+              }
+          }
         }
 
 
           }
         }
       }
+    
     
   
