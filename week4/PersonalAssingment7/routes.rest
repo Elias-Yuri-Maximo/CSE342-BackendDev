@@ -1,0 +1,61 @@
+#LOCAHOST
+
+### Gets all✔️
+GET http://localhost:8080/bookmarks HTTP/1.1 
+
+### Gets one✔️
+GET http://localhost:8080/bookmarks/6324faea54af46ae69192ab2 HTTP/1.1 
+
+### Create contact✔️
+
+POST http://localhost:8080/bookmarks/ HTTP/1.1 
+content-type: application/json
+
+{
+"title":"Narnia", "note":"dfd", "book":"bookOfMormon", "currentBook":"narnia", "currentChapter":"1", "progressPercent":"1"
+} 
+
+### Alter contact ✔️
+PUT  http://localhost:8080/bookmarks/6334f8fb3182dbbcada516ed HTTP/1.1 
+content-type: application/json
+
+{
+"title":"For Narnia and for Aslan", "note":"Reading the book of Mormon cover to cover", "book":"bookOfMormon", "currentBook":"1nephi", "currentChapter":"1", "progressPercent":"0"
+}                     
+
+### Delete contact ✔️
+DELETE http://localhost:8080/bookmarks/6335093d785973b53baca08b HTTP/1.1 
+content-type: application/json
+
+
+
+################################################
+#Render Links
+
+### Gets all✔️
+GET https://personalassignment6.onrender.com/bookmarks HTTP/1.1 
+
+### Gets one✔️
+GET https://personalassignment6.onrender.com/bookmarks/632bcc6aaff188149180c5dd HTTP/1.1 
+
+### Create contact✔️
+
+POST https://personalassignment6.onrender.com/bookmarks/ HTTP/1.1 
+content-type: application/json
+
+{
+"title":"book of mormx", "note":"Attending to president nelson`s challenge", "book":"bookOfMormon", "currentBook":"1nephi", "currentChapter":"1", "progressPercent":"0"
+}                     
+
+
+### Alter contact ✔️
+PUT https://personalassignment6.onrender.com/bookmarks/6334fb593182dbbcada516ef HTTP/1.1 
+content-type: application/json
+
+{
+"title":"For Narnia and for Aslan", "note":"Reading the book of Mormon cover to cover", "book":"bookOfMormon", "currentBook":"1nephi", "currentChapter":"1", "progressPercent":"0"
+}                     
+
+### Delete contact ✔️
+DELETE https://personalassignment6.onrender.com/bookmarks/6334fb593182dbbcada516ef HTTP/1.1 
+content-type: application/json

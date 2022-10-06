@@ -130,6 +130,7 @@ const deleteBookmark = async (req, res) => {
 }
 };
 
+
 module.exports = {
   getAll,
   getSingle,
