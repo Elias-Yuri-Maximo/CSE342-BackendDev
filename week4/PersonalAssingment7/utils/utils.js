@@ -31,6 +31,8 @@ function checkEmptyFields(body){
         return false
     }
 }
+
+
  
 const books = ['1nephi', '2nephi', 'jacob', 'enos', 'jarom','omni', 'wordsofmormon','mosiah','alma','helaman','3nephi','4nephi','mormon','ether','moroni']
 

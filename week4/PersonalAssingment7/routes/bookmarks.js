@@ -2,7 +2,9 @@ const router = require('express').Router();
 const bookmarksController = require('../controllers/bookmarks')
 
 //Goes to the GitHub loginpage
-router.get('/login',bookmarksController.login)
+router.get('/login',bookmarksController.login);
+//Comes back from the login screes
+router.get('/loginCallback',bookmarksController.loginCallback);
 
 router.get('/',bookmarksController.getAll);
 

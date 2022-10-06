@@ -1,3 +1,5 @@
+
+require('dotenv').config();
 const mongodb = require('../db/connection');
 const ObjectId = require('mongodb').ObjectId;
 const utils = require('../utils/utils')
@@ -130,7 +132,25 @@ const deleteBookmark = async (req, res) => {
 }
 };
 
+//redirect the user to github in order to login.
+const login = async(req,res)=> {
+    res.redirect(
+      `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`,
+    );
+};
+
+const loginCallback = async (req, res)=>{
+  console.log('hello')
+  res.write("Worked")
+  res.end()
+};
+
+
+
+
 module.exports = {
+  loginCallback,
+  login,
   getAll,
   getSingle,
   createBookmark,
