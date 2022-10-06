@@ -8,6 +8,8 @@ router.get('/loginCallback',bookmarksController.loginCallback);
 
 router.get('/',bookmarksController.getAll);
 
+//⭕️ CHECK IF USER LOGED IN AND SEND TO /login 
+
 router.get('/:id', bookmarksController.getSingle);
 
 router.post('/', bookmarksController.createBookmark);
