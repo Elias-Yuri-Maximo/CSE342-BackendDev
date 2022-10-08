@@ -8,11 +8,11 @@ GET http://localhost:8080/bookmarks/6324faea54af46ae69192ab2 HTTP/1.1
 
 ### Gets book✔️
 GET http://localhost:8080/bookmarks/content/1nephi HTTP/1.1 
-Authorization: Bearer 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
+Authorization: 
 ### Create contact✔️
 
 POST http://localhost:8080/bookmarks/ HTTP/1.1 
-Authorization: Bearer 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
+Authorization: 
 content-type: application/json
 
 {
