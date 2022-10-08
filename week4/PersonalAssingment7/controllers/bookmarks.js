@@ -1,5 +1,6 @@
 
 require('dotenv').config();
+const axios = require('axios')
 const mongodb = require('../db/connection');
 const ObjectId = require('mongodb').ObjectId;
 const utils = require('../utils/utils')
@@ -139,16 +140,60 @@ const login = async(req,res)=> {
     );
 };
 
+async function receive (req, res){
+  const code = req.query.code;
+  const body = {
+    client_id: process.env.GITHUB_CLIENT_ID,
+    client_secret: process.env.GITHUB_SECRET,
+    code,
+  };
+  const opts = { headers: { accept: 'application/json' } };
+  const response = await axios.post('https://github.com/login/oauth/access_token', body, opts)
+  console.log(response)
+  return res.status(200).end()
+}
+
 const loginCallback = async (req, res)=>{
-  console.log('hello')
-  res.write("Worked")
-  res.end()
+ 
+//  res.write("Worked")
+//  res.end()
+const code = req.query.code;
+const body = {
+  client_id: process.env.GITHUB_CLIENT_ID,
+  client_secret: process.env.GITHUB_CLIENT_SECRET ,
+  code,
+};
+const opts = { headers: { accept: 'application/json' } };
+const response = await axios.post('https://github.com/login/oauth/access_token', body, opts)
+
+return res.status(200).json({token:response.data})
+
 };
 
+
+async function findContent(req, res){
+  const bookName = req.params.id
+  try{
+    console.log('Single')
+    const result = await mongodb
+      .getDb()
+      .db('bookOfMormon')
+      .collection('content')
+      .find({ _id: bookName });
+    result.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists[0]);
+    });
+  }catch(err){
+    res.status(500).json(err);
+  }
+
+}
 
 
 
 module.exports = {
+  findContent,
   loginCallback,
   login,
   getAll,

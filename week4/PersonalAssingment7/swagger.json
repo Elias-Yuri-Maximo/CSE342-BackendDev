@@ -25,7 +25,18 @@
                 "produces": [
                     "application/json"
                 ],
-                "parameters": [],
+                
+                "parameters": [
+                  {
+                    "name": "Authorization",
+                    "in": "header",
+                    "description": "Bearer token",
+                    "required": true,
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                ],
                 "responses": {
                     "200": {
                     "description": "OK"
@@ -53,6 +64,15 @@
                           
                         }
                     }
+                    },
+                    {
+                      "name": "Authorization",
+                      "in": "header",
+                      "description": "Bearer token",
+                      "required": true,
+                      "schema": {
+                        "type": "string"
+                      }
                     }
                 ],
                 "responses": {
@@ -68,6 +88,37 @@
                 }
                 }
             },
+      "/bookmarks/content/{id}":{
+        "get": {
+          "description": "Gets a specific Content",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }, 
+            {
+              "name": "Authorization",
+              "in": "header",
+              "description": "Bearer token",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+
+      },
 
 
       "/bookmarks/{id}": {
@@ -85,6 +136,15 @@
               "in": "path",
               "required": true,
               "type": "string"
+            }, 
+            {
+              "name": "Authorization",
+              "in": "header",
+              "description": "Bearer token",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
             }
           ],
           "responses": {
@@ -119,6 +179,15 @@
                 
                 }
               }
+            },
+            {
+              "name": "Authorization",
+              "in": "header",
+              "description": "Bearer token",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
             }
           ],
           "responses": {
@@ -144,6 +213,15 @@
               "in": "path",
               "required": true,
               "type": "string"
+            },
+            {
+              "name": "Authorization",
+              "in": "header",
+              "description": "Bearer token",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
             }
           ],
           "responses": {
@@ -162,6 +240,7 @@
 
           }
         }
+
       }
     
     

@@ -1,3 +1,4 @@
+const checkAuth = require('../middleware/auth')
 const router = require('express').Router();
 const bookmarksController = require('../controllers/bookmarks')
 
@@ -6,17 +7,17 @@ router.get('/login',bookmarksController.login);
 //Comes back from the login screes
 router.get('/loginCallback',bookmarksController.loginCallback);
 
-router.get('/',bookmarksController.getAll);
+router.get('/', checkAuth.auth, bookmarksController.getAll);
 
-//⭕️ CHECK IF USER LOGED IN AND SEND TO /login 
+router.get('/content/:id', checkAuth.auth, bookmarksController.findContent);
 
-router.get('/:id', bookmarksController.getSingle);
+router.get('/:id', checkAuth.auth, bookmarksController.getSingle);
 
-router.post('/', bookmarksController.createBookmark);
+router.post('/',checkAuth.auth, bookmarksController.createBookmark);
 
-router.put('/:id', bookmarksController.updateBookmark);
+router.put('/:id',checkAuth.auth, bookmarksController.updateBookmark);
 
-router.delete('/:id', bookmarksController.deleteBookmark);
+router.delete('/:id',checkAuth.auth, bookmarksController.deleteBookmark);
 
 
 module.exports = router;
