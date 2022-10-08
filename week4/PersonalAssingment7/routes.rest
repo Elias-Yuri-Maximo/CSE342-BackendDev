@@ -2,9 +2,11 @@
 
 ### Gets all✔️
 GET http://localhost:8080/bookmarks HTTP/1.1 
+Authorization: 
 
 ### Gets one✔️
 GET http://localhost:8080/bookmarks/6324faea54af46ae69192ab2 HTTP/1.1 
+Authorization: 
 
 ### Gets book✔️
 GET http://localhost:8080/bookmarks/content/1nephi HTTP/1.1 
@@ -14,7 +16,6 @@ Authorization:
 POST http://localhost:8080/bookmarks/ HTTP/1.1 
 Authorization: 
 content-type: application/json
-
 {
 "title":"Narnia", "note":"dfd", "book":"bookOfMormon", "currentBook":"narnia", "currentChapter":"1", "progressPercent":"1"
 } 

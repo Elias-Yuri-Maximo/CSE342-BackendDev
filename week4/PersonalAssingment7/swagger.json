@@ -5,7 +5,7 @@
       "description": "bookmarks",
       "version": "1.0.0"
     },
-    "host": "localhost:8080",
+    "host": "personalassignment8.onrender.com",
     "basePath": "/",
 
     "paths": {
